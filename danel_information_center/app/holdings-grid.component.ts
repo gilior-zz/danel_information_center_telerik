@@ -54,7 +54,7 @@ export class HoldingsGridComponent implements OnInit {
 
 
     updateGridData() {
-        let datalg = new Array();
+        let datalg = new Array(); 
         let datamd = new Array();
         let datasm = new Array();
         let dataxs = new Array();
