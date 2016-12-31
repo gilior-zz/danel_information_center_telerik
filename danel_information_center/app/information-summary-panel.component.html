@@ -1,0 +1,144 @@
+﻿<div *ngIf="!hideInformationSummaryPanelComponent">
+    <div id="" class="row visible-lg visible-md">
+        <div class="col-xs-4">
+            <div class="row">
+                <div class="col-xs-4">Account name</div>
+
+                <div class="col-xs-8">{{account?.Name}}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">Account bank</div>
+
+                <div class="col-xs-8">{{account?.Bank}}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4">Account policy</div>
+
+                <div class="col-xs-8">{{account?.Policy}}</div>
+            </div>
+        </div>
+        <div *ngIf="isYieldStructure">
+            <div class="col-xs-2">
+                <div class="row">
+                    <div class="col-xs-12">Portfolio amount</div>
+                    <div class="col-xs-12">{{performance?.PortfolioAmount}}</div>
+                </div>
+
+            </div>
+            <div class="col-xs-2">
+                <div class="row">
+                    <div class="col-xs-12">Performance from year start</div>
+                    <div class="col-xs-12">{{performance?.PerformanceFromYearStart}}</div>
+                </div>
+
+            </div>
+            <div class="col-xs-2">
+                <div class="row">
+                    <div class="col-xs-12">Performance last 12 month</div>
+                    <div class="col-xs-12">{{performance?.Performancelast12Month}}</div>
+                </div>
+
+            </div>
+            <div class="col-xs-2">
+                <div class="row">
+                    <div class="col-xs-12">Performance last 36 month</div>
+                    <div class="col-xs-12">{{performance?.Performancelast36Month}}</div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="isTransactionsStructure">
+            <div class="col-xs-2">
+                <div class="row">
+                    <div class="col-xs-12">Tax last 12 month</div>
+                    <div class="col-xs-12">{{transactions?.TaxFromYearStart}}</div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="row">
+                    <div class="col-xs-12">Sales last 12 month</div>
+                    <div class="col-xs-12">{{transactions?.SalesFromYearStart}}</div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="col-xs-12">Buys last 12 month</div>
+                <div class=col-xs-12>{{transactions?.BuysFromYearStart}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="" class="row visible-sm visible-xs text-center">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="padding-caption">Account name</span>
+                    <span>{{account?.Name}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="padding-caption">Account bank</span>
+                    <span>{{account?.Bank}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <span class="padding-caption">Account policy</span>
+                    <span>{{account?.Policy}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="" class="row visible-sm">
+        <div *ngIf="isYieldStructure">
+            <div class="col-xs-3">
+                <div class="row">
+                    <div class="col-xs-12">Portfolio amount</div>
+                    <div class="col-xs-12">{{performance?.PortfolioAmount}}</div>
+                </div>
+
+            </div>
+            <div class="col-xs-3">
+                <div class="row">
+                    <div class="col-xs-12">Performance from year start</div>
+                    <div class="col-xs-12">{{performance?.PerformanceFromYearStart}}</div>
+                </div>
+
+            </div>
+            <div class="col-xs-3">
+                <div class="row">
+                    <div class="col-xs-12">Performance last 12 month</div>
+                    <div class="col-xs-12">{{performance?.Performancelast12Month}}</div>
+                </div>
+
+            </div>
+            <div class="col-xs-3">
+                <div class="row">
+                    <div class="col-xs-12">Performance last 36 month</div>
+                    <div class="col-xs-12">{{performance?.Performancelast36Month}}</div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div *ngIf="isTransactionsStructure">
+            <div class="col-xs-4">
+                <div class="row">
+                    <div class="col-xs-12">Tax last 12 month</div>
+                    <div class="col-xs-12">{{transactions?.TaxFromYearStart}}</div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="row">
+                    <div class="col-xs-12">Sales last 12 month</div>
+                    <div class="col-xs-12">{{transactions?.SalesFromYearStart}}</div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="col-xs-12">Buys last 12 month</div>
+                <div class=col-xs-12>{{transactions?.BuysFromYearStart}}</div>
+            </div>
+        </div>
+    </div>
+</div>

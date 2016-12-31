@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D019818-0969-4708-A6C4-B4E0D5274E3F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>danel_information_center</RootNamespace>
+    <AssemblyName>danel_information_center</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\admin-center.component.html" />
+    <Content Include="app\admin-home.component.html" />
+    <Content Include="app\input-caption.component.css">
+      <DependentUpon>input-caption.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\input-caption.component.html" />
+    <Content Include="app\input-caption.component.min.css">
+      <DependentUpon>input-caption.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\language-bar.component.css">
+      <DependentUpon>language-bar.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\language-bar.component.html" />
+    <Content Include="app\language-bar.component.min.css">
+      <DependentUpon>language-bar.component.css</DependentUpon>
+    </Content>
+    <Content Include="Content\customer_data\current_customer\advisor.jpg" />
+    <Content Include="Content\customer_data\current_customer\contact.png" />
+    <Content Include="Content\customer_data\current_customer\danel_logo.png" />
+    <Content Include="Content\customer_data\current_customer\down.bmp" />
+    <Content Include="Content\customer_data\current_customer\down.png" />
+    <Content Include="Content\customer_data\current_customer\email.png" />
+    <Content Include="Content\customer_data\current_customer\hello.png" />
+    <Content Include="Content\customer_data\current_customer\holdings-icon.png" />
+    <Content Include="Content\customer_data\current_customer\holdings-page-icon.png" />
+    <Content Include="Content\customer_data\current_customer\home-icon.png" />
+    <Content Include="Content\customer_data\current_customer\home-menu.png" />
+    <Content Include="Content\customer_data\current_customer\left-link-icon.png" />
+    <Content Include="Content\customer_data\current_customer\loading.gif" />
+    <Content Include="Content\customer_data\current_customer\Logout.png" />
+    <Content Include="Content\customer_data\current_customer\phone.png" />
+    <Content Include="Content\customer_data\current_customer\plus.png" />
+    <Content Include="Content\customer_data\current_customer\portfolio-menu.png" />
+    <Content Include="Content\customer_data\current_customer\registration_status_company_notification.xml" />
+    <Content Include="Content\customer_data\current_customer\reset_password_user_notification.xml" />
+    <Content Include="Content\customer_data\current_customer\spinner.gif" />
+    <Content Include="Content\customer_data\current_customer\spinner.png" />
+    <Content Include="Content\customer_data\current_customer\top-header-logo.png" />
+    <Content Include="Content\customer_data\current_customer\transaction-icon.png" />
+    <Content Include="Content\customer_data\current_customer\transaction-menu.png" />
+    <Content Include="Content\customer_data\current_customer\transaction-page-icon.png" />
+    <Content Include="Content\customer_data\current_customer\up.bmp" />
+    <Content Include="Content\customer_data\current_customer\up.png" />
+    <Content Include="Content\customer_data\current_customer\User.png" />
+    <Content Include="Content\customer_data\current_customer\valid_registration.xml" />
+    <Content Include="Content\customer_data\current_customer\website_unavailable.jpg" />
+    <Content Include="Content\customer_data\current_customer\x.png" />
+    <Content Include="Content\customer_data\current_customer\XMLFile1.xml" />
+    <Content Include="Content\customer_data\current_customer\yield-icon.png" />
+    <Content Include="Content\customer_data\current_customer\yield-menu.png" />
+    <Content Include="Content\customer_data\current_customer\yield-page-icon.png" />
+    <Content Include="packages.config" />
+    <Content Include="package.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="typings.json" />
+    <Content Include="app\language-bar.component.scss" />
+    <Content Include="app\admin-home.component.scss" />
+    <Content Include="app\admin-center.component.scss" />
+    <Content Include="app\input-caption.component.scss" />
+    <Content Include="Content\customer_data\current_customer\bold.eot" />
+    <Content Include="Content\customer_data\current_customer\bold.ttf" />
+    <Content Include="Content\customer_data\current_customer\bold.woff" />
+    <Content Include="Content\customer_data\current_customer\bold.woff2" />
+    <Content Include="Content\customer_data\current_customer\regular.eot" />
+    <Content Include="Content\customer_data\current_customer\regular.ttf" />
+    <Content Include="Content\customer_data\current_customer\regular.woff" />
+    <Content Include="Content\customer_data\current_customer\regular.woff2" />
+    <Content Include="Content\customer_data\current_customer\TermsOfUse.pdf" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\accounts-list.component.css">
+      <DependentUpon>accounts-list.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\accounts-list.component.html" />
+    <Content Include="app\accounts-list.component.min.css">
+      <DependentUpon>accounts-list.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\advisor-contact.component.css">
+      <DependentUpon>advisor-contact.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\advisor-contact.component.html" />
+    <Content Include="app\advisor-contact.component.min.css">
+      <DependentUpon>advisor-contact.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\app.component.css">
+      <DependentUpon>app.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\app.component.html" />
+    <Content Include="app\app.component.min.css">
+      <DependentUpon>app.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\chart.widget.html" />
+    <Content Include="app\columns.html" />
+    <Content Include="app\contact.css">
+      <DependentUpon>contact.scss</DependentUpon>
+    </Content>
+    <Content Include="app\contact.html" />
+    <Content Include="app\contact.min.css">
+      <DependentUpon>contact.css</DependentUpon>
+    </Content>
+    <Content Include="app\dashboard.css">
+      <DependentUpon>dashboard.scss</DependentUpon>
+    </Content>
+    <Content Include="app\dashboard.html" />
+    <Content Include="app\dashboard.min.css">
+      <DependentUpon>dashboard.css</DependentUpon>
+    </Content>
+    <Content Include="app\grid.widget.html" />
+    <Content Include="app\holdings-chart.component.html" />
+    <Content Include="app\holdings-dynamic-grouping.component.css">
+      <DependentUpon>holdings-dynamic-grouping.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\holdings-dynamic-grouping.component.html" />
+    <Content Include="app\holdings-dynamic-grouping.component.min.css">
+      <DependentUpon>holdings-dynamic-grouping.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\holdings-grid.component.html" />
+    <Content Include="app\holdings.css">
+      <DependentUpon>holdings.scss</DependentUpon>
+    </Content>
+    <Content Include="app\holdings.html" />
+    <Content Include="app\holdings.min.css">
+      <DependentUpon>holdings.css</DependentUpon>
+    </Content>
+    <Content Include="app\information-center-menu.component.css">
+      <DependentUpon>information-center-menu.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\information-center-menu.component.html" />
+    <Content Include="app\information-center-menu.component.min.css">
+      <DependentUpon>information-center-menu.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\information-center.component.css">
+      <DependentUpon>information-center.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\information-center.component.html" />
+    <Content Include="app\information-center.component.min.css">
+      <DependentUpon>information-center.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\information-summary-panel.component.css">
+      <DependentUpon>information-summary-panel.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\information-summary-panel.component.html" />
+    <Content Include="app\information-summary-panel.component.min.css">
+      <DependentUpon>information-summary-panel.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\login.component.css">
+      <DependentUpon>login.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\login.component.html" />
+    <Content Include="app\login.component.min.css">
+      <DependentUpon>login.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\main-site-footer.component.css">
+      <DependentUpon>main-site-footer.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\main-site-footer.component.html" />
+    <Content Include="app\main-site-footer.component.min.css">
+      <DependentUpon>main-site-footer.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\main-site-header.component.css">
+      <DependentUpon>main-site-header.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\main-site-header.component.html" />
+    <Content Include="app\main-site-header.component.min.css">
+      <DependentUpon>main-site-header.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\page-caption.component.html" />
+    <Content Include="app\performance-chart.component.html" />
+    <Content Include="app\performance-grid.component.html" />
+    <Content Include="app\performance-tool-bar.component.css">
+      <DependentUpon>performance-tool-bar.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\performance-tool-bar.component.html" />
+    <Content Include="app\performance-tool-bar.component.min.css">
+      <DependentUpon>performance-tool-bar.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\performance.css">
+      <DependentUpon>performance.scss</DependentUpon>
+    </Content>
+    <Content Include="app\performance.html" />
+    <Content Include="app\performance.min.css">
+      <DependentUpon>performance.css</DependentUpon>
+    </Content>
+    <Content Include="app\profile.css">
+      <DependentUpon>profile.scss</DependentUpon>
+    </Content>
+    <Content Include="app\profile.html" />
+    <Content Include="app\profile.min.css">
+      <DependentUpon>profile.css</DependentUpon>
+    </Content>
+    <Content Include="app\transactions-grid.component.html" />
+    <Content Include="app\transactions-tool-bar.component.css">
+      <DependentUpon>transactions-tool-bar.component.scss</DependentUpon>
+    </Content>
+    <Content Include="app\transactions-tool-bar.component.html" />
+    <Content Include="app\transactions-tool-bar.component.min.css">
+      <DependentUpon>transactions-tool-bar.component.css</DependentUpon>
+    </Content>
+    <Content Include="app\transactions.css">
+      <DependentUpon>transactions.scss</DependentUpon>
+    </Content>
+    <Content Include="app\transactions.html" />
+    <Content Include="app\transactions.min.css">
+      <DependentUpon>transactions.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-rtl.css" />
+    <Content Include="Content\bootstrap-rtl.min.css" />
+    <Content Include="Content\bootstrap-theme-rtl.css" />
+    <Content Include="Content\bootstrap-theme-rtl.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\site.css">
+      <DependentUpon>site.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\site.min.css">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\site.scss" />
+    <Content Include="app\accounts-list.component.scss" />
+    <Content Include="app\advisor-contact.component.scss" />
+    <Content Include="app\app.component.scss" />
+    <Content Include="app\contact.scss" />
+    <Content Include="app\dashboard.scss" />
+    <Content Include="app\holdings-dynamic-grouping.component.scss" />
+    <Content Include="app\holdings.scss" />
+    <Content Include="app\information-center-menu.component.scss" />
+    <Content Include="app\information-center.component.scss" />
+    <Content Include="app\information-summary-panel.component.scss" />
+    <Content Include="app\login.component.scss" />
+    <Content Include="app\main-site-footer.component.scss" />
+    <Content Include="app\main-site-header.component.scss" />
+    <Content Include="app\performance-tool-bar.component.scss" />
+    <Content Include="app\performance.scss" />
+    <Content Include="app\profile.scss" />
+    <Content Include="app\transactions-tool-bar.component.scss" />
+    <Content Include="app\transactions.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="index.html" />
+    <Content Include="Scripts\bootstrap-rtl.js" />
+    <Content Include="Scripts\bootstrap-rtl.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-2.2.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.2.4.js" />
+    <Content Include="Scripts\jquery-2.2.4.min.js" />
+    <Content Include="styles.css" />
+    <Content Include="systemjs.config.extras.js" />
+    <Content Include="systemjs.config.js" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-2.2.4.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <TypeScriptCompile Include="app\account-resolve.service.ts" />
+    <TypeScriptCompile Include="app\account.service.ts" />
+    <TypeScriptCompile Include="app\accounts-list.component.ts" />
+    <TypeScriptCompile Include="app\admin-center.component.ts" />
+    <TypeScriptCompile Include="app\admin-home.component.ts" />
+    <TypeScriptCompile Include="app\admin-routing.module.ts" />
+    <TypeScriptCompile Include="app\admin.module.ts" />
+    <TypeScriptCompile Include="app\admin.service.ts" />
+    <TypeScriptCompile Include="app\advisor-contact.component.ts" />
+    <TypeScriptCompile Include="app\advisor.service.ts" />
+    <TypeScriptCompile Include="app\app-routing.module.ts" />
+    <TypeScriptCompile Include="app\app.component.spec.ts" />
+    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\auth-guard.service.ts" />
+    <TypeScriptCompile Include="app\auth.service.ts" />
+    <TypeScriptCompile Include="app\chart.directive.ts" />
+    <TypeScriptCompile Include="app\chart.widget.ts" />
+    <TypeScriptCompile Include="app\column.ts" />
+    <TypeScriptCompile Include="app\columns.ts" />
+    <TypeScriptCompile Include="app\components.barrel.ts" />
+    <TypeScriptCompile Include="app\contact.ts" />
+    <TypeScriptCompile Include="app\core.module.ts" />
+    <TypeScriptCompile Include="app\dashboard.ts" />
+    <TypeScriptCompile Include="app\directives.barrel.ts" />
+    <TypeScriptCompile Include="app\googlerecaptcha.directive.ts" />
+    <TypeScriptCompile Include="app\grid.directive.ts" />
+    <TypeScriptCompile Include="app\grid.widget.ts" />
+    <TypeScriptCompile Include="app\hide-content.directive.ts" />
+    <TypeScriptCompile Include="app\holdings-chart.component.ts" />
+    <TypeScriptCompile Include="app\holdings-data.service.ts" />
+    <TypeScriptCompile Include="app\holdings-dynamic-grouping.component.ts" />
+    <TypeScriptCompile Include="app\holdings-grid.component.ts" />
+    <TypeScriptCompile Include="app\holdings.ts" />
+    <TypeScriptCompile Include="app\hover-scale.directive.ts" />
+    <TypeScriptCompile Include="app\information-center-menu.component.ts" />
+    <TypeScriptCompile Include="app\information-center-routing.module.ts" />
+    <TypeScriptCompile Include="app\information-center.component.ts" />
+    <TypeScriptCompile Include="app\information-center.module.ts" />
+    <TypeScriptCompile Include="app\information-summary-panel.component.ts" />
+    <TypeScriptCompile Include="app\input-caption.component.ts" />
+    <TypeScriptCompile Include="app\input-invalid-message.component.ts" />
+    <TypeScriptCompile Include="app\language-bar.component.ts" />
+    <TypeScriptCompile Include="app\location-printer.directive.ts" />
+    <TypeScriptCompile Include="app\login-routing.module.ts" />
+    <TypeScriptCompile Include="app\login.component.ts" />
+    <TypeScriptCompile Include="app\main-site-footer.component.ts" />
+    <TypeScriptCompile Include="app\main-site-header.component.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\models.ts" />
+    <TypeScriptCompile Include="app\page-caption.component.ts" />
+    <TypeScriptCompile Include="app\page-frame.module.ts" />
+    <TypeScriptCompile Include="app\page-name.service.ts" />
+    <TypeScriptCompile Include="app\parameter-resolve.service.ts" />
+    <TypeScriptCompile Include="app\parameter.service.ts" />
+    <TypeScriptCompile Include="app\performance-chart.component.ts" />
+    <TypeScriptCompile Include="app\performance-data.service.ts" />
+    <TypeScriptCompile Include="app\performance-grid.component.ts" />
+    <TypeScriptCompile Include="app\performance-tool-bar.component.ts" />
+    <TypeScriptCompile Include="app\performance.ts" />
+    <TypeScriptCompile Include="app\profile.ts" />
+    <TypeScriptCompile Include="app\remove-if.directive.ts" />
+    <TypeScriptCompile Include="app\services.barrel.ts" />
+    <TypeScriptCompile Include="app\shared.module.ts" />
+    <TypeScriptCompile Include="app\summary-values.service.ts" />
+    <TypeScriptCompile Include="app\transactions-data.service.ts" />
+    <TypeScriptCompile Include="app\transactions-grid.component.ts" />
+    <TypeScriptCompile Include="app\transactions-tool-bar.component.ts" />
+    <TypeScriptCompile Include="app\transactions.ts" />
+    <TypeScriptCompile Include="app\translation.pipe.ts" />
+    <TypeScriptCompile Include="app\user.service.ts" />
+    <TypeScriptCompile Include="app\widgets.barrel.ts" />
+    <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>23634</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8081/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

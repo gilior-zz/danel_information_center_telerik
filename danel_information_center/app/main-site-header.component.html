@@ -1,0 +1,31 @@
+﻿<div class="row hidden-xs">
+    <div class="col-sm-8">
+        <img src="../Content/customer_data/current_customer/top-header-logo.png" class="img-responsive img-thumbnail" alt="Responsive image" align="middle">
+
+        {{companyName}}
+        -investment company
+    </div>
+    <div *ngIf="isLoggedIn" class="col-sm-4">
+        <a href="#" data-toggle="modal" data-target="#advisor-contact-modal">
+            <img class="img-responsive img-thumbnail img-advidor" src="../Content/customer_data/current_customer/advisor.jpg" alt="" align="middle" />
+            <span>{{advisorProperties.name}}</span>
+        </a>
+    </div>
+</div>
+<div class="row visible-xs">
+    <div class="col-xs-12 text-center">
+        <img src="../Content/customer_data/current_customer/top-header-logo.png" class="img-responsive img-thumbnail" alt="Responsive image" align="middle">
+    </div>
+</div>
+<div class="row visible-xs">
+    <div class="col-xs-12  text-center">
+        {{companyName}}
+        -investment company
+    </div>
+</div>
+
+
+
+
+
+

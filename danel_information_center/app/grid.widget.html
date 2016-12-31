@@ -1,0 +1,18 @@
+﻿<!--<div class="big-panel" *ngIf="gridData" id="{{gridID}}" [gridData]="gridData" [gridOptions]="gridOptions" GoogleGrid>
+
+</div>-->
+
+<kendo-grid [data]="gridData.data">
+    <kendo-grid-column field="ProductID" title="Product ID" width="120">
+    </kendo-grid-column>
+    <kendo-grid-column field="ProductName" title="Product Name">
+    </kendo-grid-column>
+    <kendo-grid-column field="UnitPrice" title="Unit Price" width="230">
+    </kendo-grid-column>
+    <kendo-grid-column field="Discontinued" width="120">
+        <template kendoCellTemplate let-dataItem>
+            <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+        </template>
+    </kendo-grid-column>
+</kendo-grid>
+

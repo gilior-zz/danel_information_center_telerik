@@ -1,0 +1,56 @@
+﻿.main-panel {
+    height: 250px;
+}
+
+input {
+    height: 40px;
+    letter-spacing: 5px;
+}
+
+label {
+}
+
+/*.text-danger {
+    animation: invalid .3s ease-out;
+}*/
+
+/*.validation-text {
+}
+
+.text-danger[attribute="hidden"] {
+    animation: valid .3s ease-out;
+}
+
+@keyframes valid {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(10%);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes invalid {
+    0% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(10%);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}*/

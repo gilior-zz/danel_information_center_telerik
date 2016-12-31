@@ -1,0 +1,173 @@
+﻿<div class="row">
+
+    <div class="col-xs-12 col-sm-6 ">
+        <div class="row">
+            <!--     <div class="col-md-2 hidden-xs hidden-sm"></div>-->
+            <div class="col-md-8 col-md-push-2 col-lg-push-2 col-xs-12 h2 col-sm-9 col-sm-push-1">
+                <img class="img-responsive inline" src="../Content/customer_data/current_customer/User.png" alt="" align="middle" />
+                Login
+            </div>
+            <!--<div class="col-md-2 hidden-xs hidden-sm"></div>-->
+        </div>
+        <div class="row">
+            <!--<div class="col-md-2 hidden-xs hidden-sm"></div>-->
+            <div class="col-md-8 col-md-push-2 col-lg-push-2 col-xs-12 col-sm-9 col-sm-push-1 big-panel main-panel">
+                <form (ngSubmit)="signIn()" #signinForm="ngForm" class="form">
+                    <div class="form-group">
+
+                        <input-caption [showCaption]="name.valid">
+                            <label for="name">user name (identity number)</label>
+                        </input-caption>
+
+                        <input autocomplete="off" type="text" class="form-control" id="name"
+                               required
+                               [(ngModel)]="user.name" name="name"
+                               #name="ngModel" placeholder="user name (identity number)">
+                        <input-error [hideError]="name.valid || name.pristine">
+                            <div class="text-danger validation-text">
+                                Name is required
+                            </div>
+                        </input-error>
+
+                    </div>
+                    <div class="form-group">
+                        <input-caption [showCaption]="password.valid">
+                            <label for="password">password</label>
+                        </input-caption>
+                        <input autocomplete="off" required type="password" class="form-control" id="password"
+                               #password="ngModel" [(ngModel)]="user.password" name="email" placeholder="password">
+                        <input-error [hideError]="password.valid || password.pristine">
+                            <div class="text-danger validation-text">
+                                Password is required
+                            </div>
+                        </input-error>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-7 col-xs-push-5">
+                                <a href="#">forgot password</a>
+                                <button type="submit" class="btn btn-default text-capitalize" [disabled]="!signinForm.form.valid">login</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <!--<div class="col-md-2 hidden-xs hidden-sm"></div>-->
+        </div>
+
+    </div>
+
+    <div class="col-xs-12 col-sm-6 ">
+        <div class="row">
+            <!-- <div class="col-md-2 hidden-xs hidden-sm"></div>-->
+            <div class="col-md-8 col-md-push-2 col-lg-push-2 col-xs-12 h2 col-sm-9 col-sm-push-1">
+                <img class="img-responsive inline" src="../Content/customer_data/current_customer/plus.png" alt="" align="middle" />
+                Register
+            </div>
+            <!--<div class="col-md-2 hidden-xs hidden-sm"></div>-->
+        </div>
+        <div class="row">
+            <!--<div class="col-md-2 hidden-xs hidden-sm"></div>-->
+            <div class="col-md-8 col-md-push-2 col-lg-push-2 col-xs-12 col-sm-9 col-sm-push-1 big-panel main-panel">
+                <p>
+                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+                </p>
+                <p>
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                </p>
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">sign up</button>
+            </div>
+            <!--<div class="col-md-2 hidden-xs hidden-sm"></div>-->
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <!--<div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>-->
+            <div class="modal-body">
+                <form (ngSubmit)="onSignUp()" #signupForm="ngForm" class="form">
+                    <div class="form-group">
+                        <input-caption [showCaption]="_name.valid">
+                            <label for="name" class="text-capitalize">name</label>
+                        </input-caption>
+                        <input type="text" class="form-control text-uppercase" id="name"
+                               required
+                               [(ngModel)]="newUser.name" name="name"
+                               #_name="ngModel" placeholder="name">
+                        <input-error [hideError]="_name.valid || _name.pristine">
+                            <div class="text-danger validation-text">
+                                Name is required
+                            </div>
+                        </input-error>
+                    </div>
+                    <div class="form-group">
+                        <input-caption [showCaption]="email.valid">
+                            <label for="email" class="text-capitalize">email</label>
+                        </input-caption>
+                        <input required type="text" class="form-control text-lowercase" id="email"
+                               placeholder="email" #email="ngModel" [(ngModel)]="newUser.email" name="email">
+                        <input-error [hideError]="email.valid || email.pristine">
+                            <div class="text-danger validation-text">
+                                Email is required
+                            </div>
+                        </input-error>
+                    </div>
+                    <div class="form-group">
+                        <input-caption [showCaption]="idNumber.valid">
+                            <label for="idNumber" class="text-capitalize">identity number</label>
+                        </input-caption>
+                        <input placeholder="identity number" required type="text" class="form-control" id="idNumber"
+                               #idNumber="ngModel" [(ngModel)]="newUser.idNumber" name="idNumber">
+                        <input-error [hideError]="idNumber.valid || idNumber.pristine">
+                            <div class="text-danger validation-text">
+                                ID is required
+                            </div>
+                        </input-error>
+                    </div>
+                    <div class="form-group">
+                        <input-caption [showCaption]="phone.valid">
+                            <label for="phone" class="text-capitalize">phone</label>
+                        </input-caption>
+                        <input placeholder="phone" required type="text" class="form-control" id="phone"
+                               #phone="ngModel" [(ngModel)]="newUser.phone" name="phone">
+                        <input-error [hideError]="phone.valid || phone.pristine">
+                            <div class="text-danger validation-text">
+                                phone is required
+                            </div>
+                        </input-error>
+                    </div>
+                    <div class="form-group">
+
+                        <input-caption [showCaption]="newUser?.birthdate?.length>0">
+                            <label for="birthdate" class="text-capitalize">birthdate</label>
+                        </input-caption>
+                        <input placeholder="birthdate" type="datetime" class="form-control" id="birthdate"
+                               [(ngModel)]="newUser.birthdate" name="birthdate">
+                    </div>
+                    <div class="form-group">
+                        <div (setVerified)="setVerified($event)" googlerecaptcha [siteKey]="'6LeObAwUAAAAANlcxV6KExfLKNunrLNppCBiWbx4'" [theme]="'red'"></div>
+                    </div>
+                    <button type="submit" class="btn btn-default" [disabled]="!signupForm.form.valid || !validCaptcha">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

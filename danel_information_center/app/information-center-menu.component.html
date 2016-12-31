@@ -1,0 +1,48 @@
+﻿<nav class="navbar navbar-default">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <div class="row visible-xs">
+            <div class="col-xs-6 h3">{{pageName}}</div>
+            <div class="col-xs-6">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span>Menu</span>
+                </button>
+            </div>
+        </div>
+        <span></span>
+
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li>
+                <a id="dashboard" [attr.data-toggle]="collapse" class="menu-anchor" [attr.data-target]="navbarCollapse" routerLink="dashboard" routerLinkActive="active"><span>dashboard</span>   </a>
+            </li>
+            <li>
+
+                <a id="holdings" [attr.data-toggle]="collapse" class="menu-anchor" [attr.data-target]="navbarCollapse" routerLink="holdings" routerLinkActive="active"><span>holdings</span> </a>
+            </li>
+            <li>
+                <a id="performance" [attr.data-toggle]="collapse" class="menu-anchor" [attr.data-target]="navbarCollapse" routerLink="performance" routerLinkActive="active"><span>performance</span></a>
+            </li>
+            <li>
+                <a id="transactions" [attr.data-toggle]="collapse" class="menu-anchor" [attr.data-target]="navbarCollapse" routerLink="transactions" routerLinkActive="active"><span>transactions</span></a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>hello</span><span>{{loginProperties?.name}}</span><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a id="contact" data-toggle="modal" data-target="#advisor-contact-modal"><span [attr.data-toggle]="collapse" [attr.data-target]="navbarCollapse">contact</span></a>
+                    </li>
+                    <li><a id="profile" [attr.data-toggle]="collapse" [attr.data-target]="navbarCollapse" routerLink="profile"><span>profile</span> </a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a id="logout" data-toggle="collapse" data-target=".navbar-collapse" (click)="logout()"><span>logout</span></a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>

@@ -1,0 +1,86 @@
+﻿[
+  {
+    "outputFile": "Content/site.css",
+    "inputFile": "Content/site.scss"
+  },
+  {
+    "outputFile": "app/accounts-list.component.css",
+    "inputFile": "app/accounts-list.component.scss"
+  },
+  {
+    "outputFile": "app/information-center-menu.component.css",
+    "inputFile": "app/information-center-menu.component.scss"
+  },
+  {
+    "outputFile": "app/holdings.css",
+    "inputFile": "app/holdings.scss"
+  },
+  {
+    "outputFile": "app/advisor-contact.component.css",
+    "inputFile": "app/advisor-contact.component.scss"
+  },
+  {
+    "outputFile": "app/app.component.css",
+    "inputFile": "app/app.component.scss"
+  },
+  {
+    "outputFile": "app/contact.css",
+    "inputFile": "app/contact.scss"
+  },
+  {
+    "outputFile": "app/dashboard.css",
+    "inputFile": "app/dashboard.scss"
+  },
+  {
+    "outputFile": "app/holdings-dynamic-grouping.component.css",
+    "inputFile": "app/holdings-dynamic-grouping.component.scss"
+  },
+  {
+    "outputFile": "app/information-center.component.css",
+    "inputFile": "app/information-center.component.scss"
+  },
+  {
+    "outputFile": "app/information-summary-panel.component.css",
+    "inputFile": "app/information-summary-panel.component.scss"
+  },
+  {
+    "outputFile": "app/login.component.css",
+    "inputFile": "app/login.component.scss"
+  },
+  {
+    "outputFile": "app/main-site-footer.component.css",
+    "inputFile": "app/main-site-footer.component.scss"
+  },
+  {
+    "outputFile": "app/main-site-header.component.css",
+    "inputFile": "app/main-site-header.component.scss"
+  },
+  {
+    "outputFile": "app/performance-tool-bar.component.css",
+    "inputFile": "app/performance-tool-bar.component.scss"
+  },
+  {
+    "outputFile": "app/performance.css",
+    "inputFile": "app/performance.scss"
+  },
+  {
+    "outputFile": "app/profile.css",
+    "inputFile": "app/profile.scss"
+  },
+  {
+    "outputFile": "app/transactions.css",
+    "inputFile": "app/transactions.scss"
+  },
+  {
+    "outputFile": "app/transactions-tool-bar.component.css",
+    "inputFile": "app/transactions-tool-bar.component.scss"
+  },
+  {
+    "outputFile": "app/language-bar.component.css",
+    "inputFile": "app/language-bar.component.scss"
+  },
+  {
+    "outputFile": "app/input-caption.component.css",
+    "inputFile": "app/input-caption.component.scss"
+  }
+]

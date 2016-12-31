@@ -1,0 +1,21 @@
+﻿footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #98b7b7; }
+
+.middle {
+  /*top: 20px !important;
+    position: relative !important;*/ }
+
+img {
+  height: 60px;
+  width: auto;
+  background-color: transparent !important;
+  border: none !important; }
+
+.row {
+  margin: 0 !important; }
+

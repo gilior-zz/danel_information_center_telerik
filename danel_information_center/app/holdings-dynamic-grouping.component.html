@@ -1,0 +1,81 @@
+﻿<div class="row visible-lg visible-md">
+    <div class="col-md-2">
+
+        <div id="" class="row">
+            <label class="col-xs-12" for="asset">
+                <input #asset type="radio" name="optionsRadios" id="asset" (click)="doGroupBy(2)" checked>
+                asset-class
+            </label>
+        </div>
+        <div id="" class="row">
+            <label class="col-xs-12" for="currency">
+                <input type="radio" #currency name="optionsRadios" id="currency" (click)="doGroupBy(1)">
+                currency
+            </label>
+        </div>
+        <div id="" class="row">
+            <label class="col-xs-12" for="industry">
+                <input type="radio" #industry name="optionsRadios" id="industry" (click)="doGroupBy(4)">
+                industry
+            </label>
+        </div>
+        <div id="" class="row">
+            <label class="col-xs-12" for="country">
+                <input type="radio" #country name="optionsRadios" id="country" (click)="doGroupBy(3)">
+                country
+            </label>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <danel-chart [chartID]="'holdings-grouped-id_1'" [chartType]="chartType" [chartOptions]="chartOptions" [chartData]="chartData"></danel-chart>
+    </div>
+    <div class="col-md-2">
+        <danel-grid [gridOptions]="gridOptions"
+                    [gridData]="holdingsData"
+                    [gridID]="'holdings-detailed-id'">
+        </danel-grid>
+    </div>
+</div>
+
+<div class="row visible-xs visible-sm">
+    <div class="col-xs-6">
+        <div class="row">
+            <label for="asset">
+                <input #asset type="radio" name="optionsRadios" id="asset" (click)="doGroupBy(2)" checked>
+                asset-class
+            </label>
+        </div>
+        <div id="" class="row">
+            <label for="currency">
+                <input type="radio" #currency name="optionsRadios" id="currency" (click)="doGroupBy(1)">
+                currency
+            </label>
+        </div>
+        <div id="" class="row">
+            <label for="industry">
+                <input type="radio" #industry name="optionsRadios" id="industry" (click)="doGroupBy(4)">
+                industry
+            </label>
+        </div>
+        <div id="" class="row">
+            <label for="country">
+                <input type="radio" #country name="optionsRadios" id="country" (click)="doGroupBy(3)">
+                country
+            </label>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <danel-grid [gridOptions]="gridOptions"
+                    [gridData]="holdingsData"
+                    [gridID]="'holdings-detailed-id'">
+
+
+
+        </danel-grid>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <danel-chart [chartID]="'holdings-grouped-id_2'" [chartType]="chartType" [chartOptions]="chartOptions" [chartData]="chartData"></danel-chart>
+        </div>
+    </div>
+</div>

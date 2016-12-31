@@ -1,0 +1,38 @@
+﻿.img-advidor {
+  height: 150px;
+  width: auto;
+  border-radius: 50% !important; }
+
+.img-advisor-data {
+  width: 50px; }
+
+label {
+  display: block; }
+
+.img-arrow {
+  height: 90px;
+  width: auto;
+  border: none !important; }
+
+.my-fade {
+  transition: display 2s; }
+
+.modal-dialog {
+  /*transition: transform 1s ease-in !important;*/
+  -moz-transform: translate(0, 0) !important;
+  -ms-transform: translate(0, 0) !important;
+  -o-transform: translate(0, 0) !important;
+  -webkit-transform: translate(0, 0) !important;
+  transform: translate(0, 0) !important;
+  max-width: 400px; }
+
+.fade {
+  opacity: 0;
+  -moz-transition: opacity .25s ease-in !important;
+  -o-transition: opacity .25s ease-in !important;
+  -webkit-transition: opacity .25s ease-in !important;
+  transition: opacity .25s ease-in !important; }
+
+.fade.in {
+  opacity: 1 !important; }
+

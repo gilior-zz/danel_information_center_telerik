@@ -1,0 +1,19 @@
+﻿
+<div *ngIf="!hideAccountList" class="col-xs-12">
+    <span>current account</span>
+    <div class="dropdown inline-element">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            {{account?.Name}}
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li (click)="onAccountChanged(aggregateAccount)" value="{{account}}">{{aggregateAccount.Name}}</li>
+            <li (click)="onAccountChanged(account)" [value]="account" *ngFor="let account of accounts">{{account.Name}}</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
