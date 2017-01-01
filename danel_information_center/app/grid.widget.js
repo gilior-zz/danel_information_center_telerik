@@ -14,11 +14,10 @@ var GridWidgetComponent = (function () {
         this.el = el;
     }
     GridWidgetComponent.prototype.ngOnChanges = function () {
-        console.log(this.gridData);
+        if (this.gridData)
+            console.log(this.gridData['data']);
     };
     GridWidgetComponent.prototype.ngOnInit = function () {
-        console.log(this.gridData);
-        console.log(this.gridData['data']);
     };
     __decorate([
         core_1.Input(), 
@@ -26,7 +25,7 @@ var GridWidgetComponent = (function () {
     ], GridWidgetComponent.prototype, "gridOptions", void 0);
     __decorate([
         core_1.Input(), 
-        __metadata('design:type', Array)
+        __metadata('design:type', Object)
     ], GridWidgetComponent.prototype, "gridData", void 0);
     __decorate([
         core_1.Input(), 
