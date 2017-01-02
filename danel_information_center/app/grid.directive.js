@@ -46,7 +46,7 @@ var GridDirective = (function () {
         function drawTable() {
             var data = new google.visualization.DataTable();
             gridOptions.Columns.forEach(function (col) {
-                data.addColumn(col.Type, col.Caption);
+                data.addColumn(col.type, col.field);
             });
             data.addRows(gridData.data);
             var table = new google.visualization.Table(ele);

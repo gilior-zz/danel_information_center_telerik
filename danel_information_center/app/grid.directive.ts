@@ -51,7 +51,7 @@ export class GridDirective implements OnInit, OnDestroy, OnChanges {
         function drawTable() {
             var data = new google.visualization.DataTable();
             gridOptions.Columns.forEach(col => {
-                data.addColumn(col.Type, col.Caption);
+                data.addColumn(col.type, col.field);
             });
             data.addRows(gridData.data);
 

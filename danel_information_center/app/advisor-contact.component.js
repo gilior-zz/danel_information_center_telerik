@@ -33,6 +33,9 @@ var AdvisorContactComponent = (function () {
     AdvisorContactComponent.prototype.toggleState = function () {
         this.state = (this.state === 'active' ? 'inactive' : 'active');
     };
+    AdvisorContactComponent.prototype.ngOnInit = function () {
+        this.as.loadAdvisor();
+    };
     Object.defineProperty(AdvisorContactComponent.prototype, "isLoggedIn", {
         get: function () { return this.aus.isLoggedIn; },
         enumerable: true,
@@ -57,7 +60,7 @@ var AdvisorContactComponent = (function () {
                         transform: 'rotateX(0deg)'
                     })),
                     core_1.transition('inactive <=> active', core_1.animate('1s ease-out'))
-                ])
+                ]),
             ]
         }), 
         __metadata('design:paramtypes', [services_barrel_1.AdvisorService, auth_service_1.AuthService])

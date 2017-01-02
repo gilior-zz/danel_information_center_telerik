@@ -17,14 +17,15 @@ import { AuthService } from './auth.service'
                 transform: 'rotateX(0deg)'
             })),
             transition('inactive <=> active', animate('1s ease-out'))
-        ])
+        ]),
+
     ]
 
 
 
 
 })
-export class AdvisorContactComponent {
+export class AdvisorContactComponent implements OnInit {
     constructor(private as: AdvisorService, private aus: AuthService) {
         //$('[data-toggle="popover"]').popover()
     }
@@ -43,6 +44,10 @@ export class AdvisorContactComponent {
     state: string = 'inactive';
     toggleState() {
         this.state = (this.state === 'active' ? 'inactive' : 'active');
+    }
+
+    ngOnInit() {
+        this.as.loadAdvisor();
     }
 
 

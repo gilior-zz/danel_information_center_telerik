@@ -5,7 +5,7 @@
         {{companyName}}
         -investment company
     </div>
-    <div *ngIf="isLoggedIn" class="col-sm-4">
+    <div [@flyInOut]="'in'" *ngIf="isLoggedIn" class="col-sm-4">
         <a href="#" data-toggle="modal" data-target="#advisor-contact-modal">
             <img class="img-responsive img-thumbnail img-advidor" src="../Content/customer_data/current_customer/advisor.jpg" alt="" align="middle" />
             <span>{{advisorProperties.name}}</span>

@@ -17,41 +17,19 @@ var HoldingsGridComponent = (function () {
         var _this = this;
         this.as = as;
         this.hd = hd;
-        this.gridData = [{
-                "ProductID": 1,
-                "ProductName": "Chai",
-                "UnitPrice": 18.0000,
-                "Discontinued": true
-            }, {
-                "ProductID": 2,
-                "ProductName": "Chang",
-                "UnitPrice": 19.0000,
-                "Discontinued": false
-            }, {
-                "ProductID": 3,
-                "ProductName": "Aniseed Syrup",
-                "UnitPrice": 10.0000,
-                "Discontinued": false
-            }, {
-                "ProductID": 4,
-                "ProductName": "Chef Anton's Cajun Seasoning",
-                "UnitPrice": 22.0000,
-                "Discontinued": false
-            }, {
-                "ProductID": 5,
-                "ProductName": "Chef Anton's Gumbo Mix",
-                "UnitPrice": 21.3500,
-                "Discontinued": false
-            }, {
-                "ProductID": 6,
-                "ProductName": "Grandma's Boysenberry Spread",
-                "UnitPrice": 25.0000,
-                "Discontinued": false
-            }];
+        this.gridData = [];
         this.subscription = this.as.account$.subscribe(function () { return _this.updateGridData(); });
     }
     HoldingsGridComponent.prototype.updateGridData = function () {
         var _this = this;
+        this.gridData.length = 0;
+        for (var row = 0; row < 20; row++) {
+            for (var col = 0; col < 12; col++) {
+                this.gridData.push({
+                    "holding filed 0": "item " + col
+                });
+            }
+        }
         var datalg = new Array();
         var datamd = new Array();
         var datasm = new Array();
@@ -81,7 +59,6 @@ var HoldingsGridComponent = (function () {
             _this.holdingsDatamd = { data: _this.gridData };
             _this.holdingsDatasm = { data: _this.gridData };
             _this.holdingsDataxs = { data: _this.gridData };
-            console.log(_this.gridData);
         });
     };
     HoldingsGridComponent.prototype.ngOnInit = function () {
@@ -90,13 +67,13 @@ var HoldingsGridComponent = (function () {
         var smCols = [];
         var xsCols = [];
         for (var i = 0; i < 12; i++)
-            lgCols.push({ Caption: "column" + i, Type: 'number' });
+            lgCols.push({ field: "holding filed " + i });
         for (var i = 0; i < 9; i++)
-            mdCols.push({ Caption: "column" + i, Type: 'number' });
+            mdCols.push({ field: "holding filed " + i });
         for (var i = 0; i < 6; i++)
-            smCols.push({ Caption: "column" + i, Type: 'number' });
+            smCols.push({ field: "holding filed " + i });
         for (var i = 0; i < 3; i++)
-            xsCols.push({ Caption: "column" + i, Type: 'number' });
+            xsCols.push({ field: "holding filed " + i });
         this.gridOptionslg = { Columns: lgCols };
         this.gridOptionsmd = { Columns: mdCols };
         this.gridOptionssm = { Columns: smCols };

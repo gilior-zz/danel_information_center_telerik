@@ -21,7 +21,9 @@ export class PerformanceGridComponent implements OnInit {
     }
 
     ngOnInit() {
-        let columns: Column[] = [{ Caption: 'performanceDate', Type: 'date' }, { Caption: 'monthID', Type: 'number' }, { Caption: 'portfolioAmount', Type: 'number' }, { Caption: 'yield', Type: 'number' }]
+        let columns: Column[] = [];
+        for (let i = 0; i < 3; i++)
+            columns.push({ field: `holding filed ${i}` });
         this.gridOptions = { Columns: columns };
         this.updateGridData();
 

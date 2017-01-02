@@ -3,7 +3,7 @@
     trigger, transition, animate,
     style, state, TemplateRef, ViewContainerRef, ElementRef, OnChanges
 } from '@angular/core';
-import { GridOptions, GridData } from './models'
+import { GridOptions, GridData,Column } from './models'
 @Component({
     selector: 'danel-grid',
     moduleId: module.id,
@@ -19,8 +19,7 @@ export class GridWidgetComponent implements OnInit, OnChanges {
     }
 
     ngOnChanges() {
-        if (this.gridData)
-            console.log(this.gridData['data']);
+       
     }
     @Input() public gridOptions: GridOptions;
     //@Input() public gridData: any;
@@ -29,6 +28,21 @@ export class GridWidgetComponent implements OnInit, OnChanges {
 
     ngOnInit() {
 
+    }
+
+    get columns(): Column[] {
+        console.log(this.gridOptions.Columns);
+        return this.gridOptions.Columns;
+    }
+
+    private hiddenColumns: string[] = [];
+
+    private restoreColumns(): void {
+        this.hiddenColumns.length = 0;
+    }
+
+    private hideColumn(field: string): void {
+        this.hiddenColumns.push(field);
     }
 
 

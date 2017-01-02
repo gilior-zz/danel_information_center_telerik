@@ -26,7 +26,9 @@ var PerformanceGridComponent = (function () {
         this.pd.getPerformancePerResolution(this.as.Account, models_1.Resolution.last12Monthes).then(function (i) { _this.performanceData = { data: data }; });
     };
     PerformanceGridComponent.prototype.ngOnInit = function () {
-        var columns = [{ Caption: 'performanceDate', Type: 'date' }, { Caption: 'monthID', Type: 'number' }, { Caption: 'portfolioAmount', Type: 'number' }, { Caption: 'yield', Type: 'number' }];
+        var columns = [];
+        for (var i = 0; i < 3; i++)
+            columns.push({ field: "holding filed " + i });
         this.gridOptions = { Columns: columns };
         this.updateGridData();
     };

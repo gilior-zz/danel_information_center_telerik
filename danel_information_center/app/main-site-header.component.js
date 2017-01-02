@@ -38,7 +38,28 @@ var MainSiteHeaderComponent = (function () {
         configurable: true
     });
     MainSiteHeaderComponent = __decorate([
-        core_1.Component({ selector: 'main-site-header', moduleId: module.id, templateUrl: './main-site-header.component.html', styleUrls: ['./main-site-header.component.css'] }), 
+        core_1.Component({
+            selector: 'main-site-header', moduleId: module.id, templateUrl: './main-site-header.component.html', styleUrls: ['./main-site-header.component.css'],
+            animations: [
+                core_1.trigger('flyInOut', [
+                    core_1.state('in', core_1.style({ transform: 'translateX(0)' })),
+                    core_1.transition('void => *', [
+                        core_1.animate('1s', core_1.keyframes([
+                            core_1.style({ opacity: 0, transform: 'translateX(-100%)', offset: 0 }),
+                            core_1.style({ opacity: 1, transform: 'translateX(25px)', offset: 0.3 }),
+                            core_1.style({ opacity: 1, transform: 'translateX(0)', offset: 1.0 })
+                        ]))
+                    ]),
+                    core_1.transition('* => void', [
+                        core_1.animate('1s', core_1.keyframes([
+                            core_1.style({ opacity: 1, transform: 'translateX(0)', offset: 0 }),
+                            core_1.style({ opacity: 1, transform: 'translateX(-25px)', offset: 0.7 }),
+                            core_1.style({ opacity: 0, transform: 'translateX(100%)', offset: 1.0 })
+                        ]))
+                    ])
+                ])
+            ]
+        }), 
         __metadata('design:paramtypes', [services_barrel_1.ParameterService, auth_service_1.AuthService, services_barrel_2.AdvisorService])
     ], MainSiteHeaderComponent);
     return MainSiteHeaderComponent;

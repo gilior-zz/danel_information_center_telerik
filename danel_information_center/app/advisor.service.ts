@@ -1,5 +1,5 @@
-﻿import {  Injectable}   from '@angular/core';
-import {AdvisorProperties} from './models'
+﻿import { Injectable } from '@angular/core';
+import { AdvisorProperties } from './models'
 @Injectable()
 
 export class AdvisorService {
@@ -7,7 +7,9 @@ export class AdvisorService {
     builtInMessages: Array<string>;
     constructor() { }
     loadAdvisor(): void {
+
         this.advisorProperties = { mail: 'mail@mail.com', name: 'name', phone: 'phone' };
+        if (this.builtInMessages != null) return;
         this.builtInMessages = new Array<string>();
         for (let i = 0; i < 5; i++)
             this.builtInMessages.push(`message ${i}`);

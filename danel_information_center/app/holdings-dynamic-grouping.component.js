@@ -32,9 +32,15 @@ var HoldingsDynamicGroupingComponent = (function () {
             ['C', num ^= i++],
             ['D', num ^= i++],
             ['E', num ^= i++]];
-        for (var i_1 = 0; i_1 < 5; i_1++)
-            data.push([this.as.Account.ID || 999, this.as.Account.ID || 999, ("item " + (this.as.Account.ID || 999))]);
-        this.hd.getHoldingsByGroupMode(this.as.Account, this.holdingsGroupType).then(function (i) { _this.holdingsData = { data: data }; _this.chartData = chartData; });
+        var gridData = [];
+        for (var row = 0; row < 20; row++) {
+            for (var col = 0; col < 12; col++) {
+                gridData.push({
+                    "holding filed 0": "item " + col
+                });
+            }
+        }
+        this.hd.getHoldingsByGroupMode(this.as.Account, this.holdingsGroupType).then(function (i) { _this.holdingsData = gridData; _this.chartData = chartData; });
     };
     HoldingsDynamicGroupingComponent.prototype.doGroupBy = function (holdingsGroupType) {
         this.holdingsGroupType = holdingsGroupType;
@@ -49,7 +55,9 @@ var HoldingsDynamicGroupingComponent = (function () {
             height: 400,
             is3D: true
         };
-        var columns = [{ Caption: 'ItemID', Type: 'number' }, { Caption: 'Amount ', Type: 'number' }, { Caption: 'ItemName ', Type: 'string' }];
+        var columns = [];
+        for (var i = 0; i < 3; i++)
+            columns.push({ field: "holding filed " + i });
         this.gridOptions = { Columns: columns };
     };
     HoldingsDynamicGroupingComponent = __decorate([

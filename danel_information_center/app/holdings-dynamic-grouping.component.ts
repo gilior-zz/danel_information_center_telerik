@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import {GridOptions, Holding, Column, GridData, HoldingsGroupType} from './models'
-import { Subscription }   from 'rxjs/Subscription';
-import {AccountService, HoldingsDataService} from './services.barrel'
+import { GridOptions, Holding, Column, GridData, HoldingsGroupType } from './models'
+import { Subscription } from 'rxjs/Subscription';
+import { AccountService, HoldingsDataService } from './services.barrel'
 @Component({
     selector: 'holdings-dynamic-grouping',
     moduleId: module.id,
@@ -11,7 +11,7 @@ import {AccountService, HoldingsDataService} from './services.barrel'
 export class HoldingsDynamicGroupingComponent implements OnInit {
     gridOptions: GridOptions;
     holdingsGroupType: HoldingsGroupType
-    holdingsData: GridData;
+    holdingsData: any;
     chartData: any;
     chartType: string;
     private subscription: Subscription;
@@ -34,9 +34,15 @@ export class HoldingsDynamicGroupingComponent implements OnInit {
             ['C', num ^= i++],
             ['D', num ^= i++],
             ['E', num ^= i++]];
-        for (let i = 0; i < 5; i++)
-            data.push([this.as.Account.ID || 999, this.as.Account.ID || 999, `item ${this.as.Account.ID || 999}`]);
-        this.hd.getHoldingsByGroupMode(this.as.Account, this.holdingsGroupType).then(i => { this.holdingsData = { data: data }; this.chartData = chartData });
+        let gridData: any[] = [];
+        for (let row = 0; row < 20; row++) {
+            for (let col = 0; col < 12; col++) {
+                gridData.push({
+                    "holding filed 0": `item ${col}`
+                })
+            }
+        }
+        this.hd.getHoldingsByGroupMode(this.as.Account, this.holdingsGroupType).then(i => { this.holdingsData = gridData; this.chartData = chartData });
     }
 
     doGroupBy(holdingsGroupType: number) {
@@ -63,7 +69,9 @@ export class HoldingsDynamicGroupingComponent implements OnInit {
             //}
         };
 
-        let columns: Column[] = [{ Caption: 'ItemID', Type: 'number' }, { Caption: 'Amount ', Type: 'number' }, { Caption: 'ItemName ', Type: 'string' }]
+        let columns: Column[] = [];
+        for (let i = 0; i < 3; i++)
+            columns.push({ field: `holding filed ${i}` });
         this.gridOptions = { Columns: columns };
 
     }

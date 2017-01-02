@@ -1,5 +1,5 @@
 ﻿export interface Column {
-    Caption: string, Type: string
+    field: string, type?: string
 }
 
 export interface User {

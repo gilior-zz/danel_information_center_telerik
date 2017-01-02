@@ -12,12 +12,25 @@ var core_1 = require('@angular/core');
 var GridWidgetComponent = (function () {
     function GridWidgetComponent(el) {
         this.el = el;
+        this.hiddenColumns = [];
     }
     GridWidgetComponent.prototype.ngOnChanges = function () {
-        if (this.gridData)
-            console.log(this.gridData['data']);
     };
     GridWidgetComponent.prototype.ngOnInit = function () {
+    };
+    Object.defineProperty(GridWidgetComponent.prototype, "columns", {
+        get: function () {
+            console.log(this.gridOptions.Columns);
+            return this.gridOptions.Columns;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    GridWidgetComponent.prototype.restoreColumns = function () {
+        this.hiddenColumns.length = 0;
+    };
+    GridWidgetComponent.prototype.hideColumn = function (field) {
+        this.hiddenColumns.push(field);
     };
     __decorate([
         core_1.Input(), 

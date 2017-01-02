@@ -14,6 +14,8 @@ var AdvisorService = (function () {
     }
     AdvisorService.prototype.loadAdvisor = function () {
         this.advisorProperties = { mail: 'mail@mail.com', name: 'name', phone: 'phone' };
+        if (this.builtInMessages != null)
+            return;
         this.builtInMessages = new Array();
         for (var i = 0; i < 5; i++)
             this.builtInMessages.push("message " + i);

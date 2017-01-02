@@ -20,13 +20,20 @@ var TransactionsGridComponent = (function () {
     }
     TransactionsGridComponent.prototype.updateGridData = function () {
         var _this = this;
-        var data = [];
-        for (var i = 0; i < 50; i++)
-            data.push([new Date(), this.as.Account.ID || 999, this.as.Account.ID || 999]);
-        this.td.getTransactiosPerResolution(this.as.Account, models_1.Resolution.last12Monthes).then(function (i) { _this.transactionsData = { data: data }; });
+        var gridData = [];
+        for (var row = 0; row < 20; row++) {
+            for (var col = 0; col < 12; col++) {
+                gridData.push({
+                    "holding filed 0": "item " + col
+                });
+            }
+        }
+        this.td.getTransactiosPerResolution(this.as.Account, models_1.Resolution.last12Monthes).then(function (i) { _this.transactionsData = gridData; });
     };
     TransactionsGridComponent.prototype.ngOnInit = function () {
-        var columns = [{ Caption: 'Date', Type: 'date' }, { Caption: 'quantity', Type: 'number' }, { Caption: 'amount', Type: 'number' }];
+        var columns = [];
+        for (var i = 0; i < 3; i++)
+            columns.push({ field: "holding filed " + i });
         this.gridOptions = { Columns: columns };
         this.updateGridData();
     };
